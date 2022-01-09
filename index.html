@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<title>Nazreen Zulaikha Personal Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        function snow() {
+            //1, define a snowflake template
+            var flake = $("<div>").css({
+                "position": "absolute",
+                "color": "#fff"
+            }).html("❄️");
+ 
+            //Get the width of the page, use this number to calculate, the value of left when the snowflake starts
+            var documentWidth = $(document).width();
+ 
+            //Get the height of the page, which is equivalent to the position of the Y axis when the snowflakes fall
+            var documentHieght = $(document).height();
+ 
+            //Define the number of milliseconds to generate a snowflake
+            var millisec = 100;
+            //2, set the first timer, a periodic timer, and generate a snowflake every time (millisec);
+            setInterval(function() {
+                //Randomly generate the value of left at the beginning of the snowflake falling, which is equivalent to the position of the X axis at the beginning
+                var startLeft = Math.random() * documentWidth;
+ 
+                //Randomly generate the value of left at the end of snowflake falling, which is equivalent to the position of the X axis at the end
+                var endLeft = Math.random() * documentWidth;
+ 
+                // Randomly generate snowflake size
+                var flakeSize = 5 + 20 * Math.random();
+ 
+                //Randomly generate the falling duration of snowflakes
+                var durationTime = 4000 + 7000 * Math.random();
+ 
+                //Randomly generate the transparency at the beginning of falling snowflakes
+                var startOpacity = 0.7 + 0.3 * Math.random();
+ 
+                //Randomly generate the transparency at the end of falling snowflakes
+                var endOpacity = 0.2 + 0.2 * Math.random();
+ 
+                //3. Clone a snowflake template, define the initial style of the snowflake, and stitch it into the page
+                flake.clone().appendTo($("body")).css({
+                    "left": startLeft,
+                    "opacity": startOpacity,
+                    "font-size": flakeSize,
+                    "top": "-25px",
+                }).animate({ //Execute animation
+                    "left": endLeft,
+                    "opacity": endOpacity,
+                    "top": documentHieght
+                }, durationTime, function() {
+                    //4. When the snowflake falls, delete the snowflake.
+                    $(this).remove(); 
+                });
+            }, millisec);
+        };
+        snow();
+    </script>
+
+<audio controls="autoplay">
+  <source src="music/websitemusic.mp3" type="audio/mpeg">
+</audio>
+<body class="w3-content" style="max-width:1300px">
+
+
+<!-- First Grid: Welcome & Greeting -->
+<div  class="w3-row">
+  <div class="w3-half w3-black w3-container w3-center" style="height:700px"> <a href="top"></a>
+    <div class="w3-padding-64">
+      <h1>Welcome To Nazreen's Website</h1>
+    </div>
+    <div class="w3-padding-64">
+      <a href="#personalinfo" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">Personal Info</a>
+      <a href="#education" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Education History</a>
+      <a href="#experience" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Experience</a>
+      <a href="#skills" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Skills</a>
+      <a href="#summary" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">Summary</a>
+      <a href="#contact" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Contact Info</a>
+    </div>
+  </div>
+  <div class="w3-half w3-blue-grey w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-center">
+      <h1>Hi,</h1>
+      <img src="images/nazreenprofile.jpg" class="w3-margin w3-circle" alt="Person" style="width:50%">
+      <div class="w3-left-align w3-padding-large">
+        <p align="justify">Welcome to my website. In this website you will find more about myself including my personal information, education history, objective, my skills and more. You can go through this website to find more about myself. I hope you will have a great time browsing my personal website and find it interesting.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:780px" id="personalinfo">
+    <div class="w3-padding-64">
+      <h2>Personal Info</h2>
+      <br>
+      <p align="left"> &nbsp&nbsp&nbsp <b>Full Name:</b> NAZREEN ZULAIKHA BINTI NAZRUL AZLY 
+        <br>
+        <br>
+        &nbsp&nbsp&nbsp <b>Address:</b> &nbsp&nbspNO. 9, LORONG 6, PERUMAHAN SEBERANG BALOK, 26100, <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp KUANTAN,PAHANG.
+        <br>
+        <br>
+        &nbsp&nbsp&nbsp <b>Gender:</b> &nbsp&nbsp&nbsp Female
+        <br>
+        <br>
+        &nbsp&nbsp&nbsp <b>Birtdate:</b> &nbsp&nbsp 19 July 2000
+        <br>
+        <br>
+        &nbsp&nbsp&nbsp <b>Hobbies:</b> &nbsp&nbsp Vlogging, Cleaning and Decorate.
+        <br>
+      
+        &nbsp&nbsp&nbsp  <p align="center"><i>Here is one of my video from my Youtube Channel:</i> </p>
+
+       <p align="center"><iframe width="470" height="250" src="https://www.youtube.com/embed/6v45gT0lDpM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </p> 
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-half">
+      </div>
+      <div class="w3-half">
+      </div>
+    </div>
+    <div class="w3-row w3-hide-small">
+      <div class="w3-half">
+      </div>
+      <div class="w3-half">
+      </div>
+    </div>
+    <div class="w3-row w3-hide-small">
+      <div class="w3-half">
+      </div>
+      <div class="w3-half">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="w3-half w3-indigo w3-container" style="min-height:802px">
+    <div class="w3-padding-64 w3-center" id="education">
+      <h2>Education History</h2>
+      <p>A timeline of my educations throughout the year.</p>
+      <div class="w3-container w3-responsive">
+        <table class="w3-table">
+          <tr>
+            <th>Year</th>
+            <th>Study Venue</th>
+            <th>Result</th>
+          </tr>
+          <tr class="w3-white">
+            <td>2013-2017</td>
+            <td>Sekolah Menengah Tengku Ampuan Fatimah </td>
+            <td>6A 3B</td>
+          </tr>
+          <tr>
+            <td>2018-2020</td>
+            <td>Studied Diploma of Business Study (BA111) in UiTM </td>
+            <td> CGPA : 3.51</td>
+          </tr>
+          <tr class="w3-white">
+            <td>2021-NOW</td>
+            <td>Studying Bachelor of Business Administration (Hons.) Marketing (BA240) in UiTM</td>
+            <td>-</td>
+          </tr>
+        </table>
+        <p align="center"> 
+  <img src="https://c.tenor.com/VaSWST7H61gAAAAj/uitm-logo-uitm.gif">
+</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Third Grid: Experience & Skills -->
+
+<div class="w3-half w3-blue-grey w3-container" style="height:700px">
+    <div id="experience" class="w3-padding-64 w3-center" >
+      <h1 >Experience</h1>
+      <div class="w3-left-align w3-padding-large">
+        <p align="justify">During my Diploma study, I have joined a various business programs that required me to produce and sell products. Other than that, I also have entered a contest producing new product for disable people. I have create a shopping cart for handicap person. My group won the second place among other contestants. Moreover, my mother own a boutique and I help my mother with her business. The main point I wan to deliver here is, even I do not have a single working expreince in real industries, I have experience the most alike to the real working industries during my study.  </p>
+
+        <p align="justify"> I have a my study website on notion. Feel free to go through my Notion website. I posted all of my work during my study here:
+        <a href="https://pickled-help-66c.notion.site/Marketing-Hons-3rd-Semester-f81704171c8e45f7aa9412d2217f9730" target="_blank" > Nazreen's Notion Website</a> </p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="w3-half w3-teal w3-container" style="height:700px">
+    <div id="skills" class="w3-padding-64 w3-padding-large">
+      <h1 align="center">Skills</h1>
+      <p class="w3-opacity">Im good at:</p>
+      <p class="w3-wide"><i class="fa fa-camera"></i>Malay Influency</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:95%">95%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>English Influency</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Microsoft Skills</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div>
+<br>
+<br>
+  <p align="justify"> Other than that, I also make a great teamwork if I assign working as a group. Based on my previous experience, I can easily blend with new environtment and I do like to learn something new everyday. I will tend to ask people for something I do not know such as solving a problem. Im a hard working person and I will do my best in solving problem in any situation with help from people around me.</p>
+      </form>
+    </div>
+  </div>
+</div>
+</di> 
+ <!-- Forth Grid: Contact and Summary-->
+<div class="w3-row" >
+  <div  class="w3-half w3-dark-grey w3-container w3-center" style="height:700px">
+    <div  class="w3-padding-64">
+      <h1 id="summary">Summary</h1>
+    </div>
+    <div class="w3-padding-64">
+      <p align="justify">Overall, I am a resposible, confident and willing to try something new in variety of situation. I am also always want to learn something new and develop new skills. I also easily able to adopt wiht new environment and work under pressure. As for me, working under pressure is good because I will have some motivation and goal to achive.</p>
+      
+    </div>
+  </div>
+
+<div class="w3-half w3-indigo w3-container" style="min-height:700px">
+    <div class="w3-padding-64 w3-center">
+      <h2 id="contact">Contact</h2>
+      <p> <i> My contact info for business inquiries </i> </p>
+      <br>
+      <br>
+      <br>
+      <div class="w3-container w3-responsive">
+        <p>Malaysia </p>
+        <p>+6011-12345678 </p>
+        <p>nazreenzulaikha00@gmail.com</p>
+        
+        <img src="images/nazreen.jpg" border="5" class="w3-margin w3-circle" alt="Person" style="width:20%">
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-black w3-padding-16">
+  <p> <i>Website by Nazreen Zulaikha </i> </p> 
+  <p align="right" > <a href="#top"> Go To Top </a></p>
+
+ 
+    
+    
+  </div>
+</footer>
+
+</body>
+</html>
